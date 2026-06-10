@@ -1,0 +1,147 @@
+.contact-container {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-subheading {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+  font-size: 1rem;
+}
+
+.inp, .msg {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.inp:focus, .msg:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.msg {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #45a049;
+}
+
+/* ====================== MOBILE ====================== */
+@media (max-width: 767px) {
+  .contact-container {
+    padding: 40px 15px;
+  }
+
+  .contact-heading {
+    font-size: 2.2rem;
+  }
+
+  .name-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .inp, .msg {
+    padding: 12px 14px;
+    font-size: 0.98rem;
+  }
+
+  .contact-btn {
+    padding: 14px;
+  }
+}
+
+/* ====================== TABLET ====================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-wrapper {
+    max-width: 650px;
+  }
+
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* ====================== DESKTOP ====================== */
+@media (min-width: 1025px) {
+  .contact-container {
+    padding: 80px 20px;
+  }
+
+  .contact-wrapper {
+    max-width: 580px;        /* Reduced width - looks like half page */
+  }
+
+  .contact-heading {
+    font-size: 3rem;
+  }
+
+  /* Optional: Add subtle card effect on desktop */
+  .contact-wrapper {
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+}

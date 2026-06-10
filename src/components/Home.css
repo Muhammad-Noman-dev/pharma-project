@@ -1,0 +1,153 @@
+
+.main-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 20px;
+  max-width: 80%;
+}
+
+.content h5, .content h1 {
+  margin: 10px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.child-grid1, .child-grid2, .child-grid3 {
+  background-color: #f8f8f8;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.child-grid1 h1, .child-grid2 h1, .child-grid3 h1 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.child-grid1 h3, .child-grid2 h3, .child-grid3 h3 {
+  color: #666;
+}
+
+/* ====================== MOBILE ====================== */
+@media (max-width: 767px) {
+  .img {
+    max-height: 350px;
+  }
+
+  .content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 30px 15px;
+    color: #333;
+    background-color: rgba(255,255,255,0.95);
+    margin-top: -20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 90%;
+    z-index: 2;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    gap: 15px;
+    margin: 30px auto;
+  }
+
+  .child-grid1, .child-grid2, .child-grid3 {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+
+/* ====================== TABLET ====================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    max-width: 70%;
+  }
+
+  .child-grid1 h1, .child-grid2 h1, .child-grid3 h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ====================== DESKTOP ====================== */
+@media (min-width: 1025px) {
+  .img {
+    height: 650px;
+  }
+  
+  .content {
+    max-width: 600px;
+  }
+  
+  .content h1 {
+    font-size: 3.5rem;
+  }
+}

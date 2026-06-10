@@ -1,0 +1,135 @@
+
+.supplement-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.sup {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stor-child1,
+.stor-child2,
+.stor-child3 {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.stor-child1:hover,
+.stor-child2:hover,
+.stor-child3:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imgp2 {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h2 {
+  font-size: 1.25rem;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ====================== MOBILE ====================== */
+@media (max-width: 767px) {
+  .supplement-section {
+    padding: 40px 15px;
+  }
+
+  .sup {
+    font-size: 2rem;
+    margin-bottom: 35px;
+  }
+
+  .store-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .imgp2 {
+    height: 220px;
+  }
+
+  .product-info h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ====================== TABLET ====================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .sup {
+    font-size: 2.2rem;
+  }
+
+  .imgp2 {
+    height: 240px;
+  }
+}
+
+/* ====================== DESKTOP ====================== */
+@media (min-width: 1025px) {
+  .sup {
+    font-size: 2.8rem;
+  }
+
+  .imgp2 {
+    height: 280px;
+  }
+
+  .product-info h2 {
+    font-size: 1.35rem;
+  }
+}
+
+.home-img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .home-img {
+    max-height: 280px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home-img {
+    max-height: 380px;
+  }
+}
