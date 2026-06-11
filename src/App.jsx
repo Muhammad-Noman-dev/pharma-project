@@ -19,7 +19,7 @@ const App = () => {
             <li><Link to="/">HOME</Link></li>
             <li><NavLink to="/store">STORE</NavLink></li>
             <div className="dropdown">
-              <li><button to="/dropdown" className="dropbtn" onClick={toggleMenu}>DROPDOWN</button></li>
+              <li><button to="/dropdown" className="dropbtn" onClick={toggleMenu}>Products</button></li>
             <div >
               <ul className={`drop-menu ${isopen ? "open-menu" : ""}`}>
                 <li><Link>Suppliments</Link></li>
